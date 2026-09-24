@@ -9,24 +9,24 @@ export default function About() {
         // use the src property of the image object
         backgroundImage: `url(${backgroundImage.src})`,
         // other styles
-        backgroundPosition: "center",
-        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        width: "100vw",
-        height: "100vh",
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        width: "100%",
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center'
       }}
+      // mobile: fit the whole 4:3 photo to the width. sm+: original full-bleed cover.
+      className="bg-contain bg-top sm:h-screen sm:bg-cover sm:bg-center"
     >
-      <div style={{ height: "50vh" }} className="w-full flex items-center justify-center"></div>
-      <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height: "50vh" }} className="w-full flex flex-col items-center justify-center p-4">
+      <div className="w-full flex items-center justify-center aspect-[4/3] sm:aspect-auto sm:h-1/2"></div>
+      <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }} className="w-full flex flex-col items-center justify-center p-4 sm:h-1/2">
         <h1 style={{ color: 'white' }}>We are Dusk Collector!</h1>
 
         <p style={{ fontSize: 18, color: 'white' }}>
-          Formed in 2024, in Seattle, WA. We're comprised of
-          Apurav (Guitars), Jake (Bass), Robby (Guitars), Sanchit (Drums), and Wynn (Vocals).
+          Formed in 2024, in Seattle, WA. We&apos;re comprised of
+          Apurav (Guitars), Robby (Guitars), Jake (Bass), Sanchit (Drums), and Wynn (Vocals).
         </p>
 
         <p style={{ fontSize: 18, color: 'white' }}>
