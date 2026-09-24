@@ -21,19 +21,19 @@ export default function About() {
       }}
     >
       <div style={{ height: "50vh" }} className="w-full flex items-center justify-center"></div>
-      <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height: "50vh" }} className="w-full flex flex-col items-center justify-center">
-        <h1 style={{ fontSize: 50, color: 'white' }}>We are Dusk Collector!</h1>
+      <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height: "50vh" }} className="w-full flex flex-col items-center justify-center p-4">
+        <h1 style={{ color: 'white' }}>We are Dusk Collector!</h1>
 
-        <p style={{ fontSize: 20, color: 'white' }}>
+        <p style={{ fontSize: 18, color: 'white' }}>
           Formed in 2024, in Seattle, WA. We're comprised of
           Apurav (Guitars), Jake (Bass), Robby (Guitars), Sanchit (Drums), and Wynn (Vocals).
         </p>
 
-        <p style={{ fontSize: 20, color: 'white' }}>
+        <p style={{ fontSize: 18, color: 'white' }}>
           Our influences include a ton of 90s and 2000s rock and metal and prog, with a bit of LoFi and post-rock thrown in for good measure.
         </p>
 
-        <p style={{ fontSize: 20, color: 'white' }}>
+        <p style={{ fontSize: 18, color: 'white' }}>
           We love to blend in our influences and hope to create something unique and relatable.
         </p>
       </div>
