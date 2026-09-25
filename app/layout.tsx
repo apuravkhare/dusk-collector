@@ -4,6 +4,8 @@ import "./globals.css";
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TopNavBar from "./TopNavBar";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <TopNavBar />
         {children}
       </body>
     </html>

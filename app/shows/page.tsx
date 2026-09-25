@@ -1,12 +1,11 @@
 
-import { promises as fs } from 'fs';
+import shows from '@/data/shows.json';
 import backgroundImage from "../../public/000009960020.jpg";
 import ShowsContainer from './shows-container';
 
-export default async function ShowsPage() {
-  const file = await fs.readFile(process.cwd() + '/data/shows.json', 'utf8');
-  const shows = JSON.parse(file);
-
+export default function ShowsPage() {
+  // const file = await fs.readFile(process.cwd() + '/data/shows.json', 'utf8');
+  // const shows = JSON.parse(file);
 
   return (
 
