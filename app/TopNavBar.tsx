@@ -12,7 +12,7 @@ function TopNavBar( { swiperInstance }: { swiperInstance: any } ) {
     <Navbar expand="lg" className="bg-body-tertiary top-0 z-50" sticky="top">
       <Container>
         <Navbar.Brand onClick={() => swiperInstance?.slideTo(0, 800)}>
-          <span className="text-2xl font-bold text-black dark:text-zinc-50">
+          <span className="flex items-center text-2xl font-bold text-black dark:text-zinc-50">
             <img src={duskCollectorLogo.src} width="30" height="30" className="d-inline-block align-top me-2" />
             Dusk Collector
           </span>

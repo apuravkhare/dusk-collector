@@ -19,11 +19,29 @@ function VideoPage() {
   );
 }
 
+function BandName() {
+  const bandName = "DUSK COLLECTOR";
+  const letters = bandName.split("");
+  return (
+    <div data-swiper-parallax="-500" className="flex flex-row justify-center items-center fade-text color-black text-4xl opacity-80">
+      {letters.map((char, index) => (
+        <span
+          key={index}
+          style={{ "--index": index } as React.CSSProperties} // Pass index to CSS variables
+        >
+          {char === " " ? "\u00A0" : char} {/* Handles blank spaces correctly */}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 
 function ParallaxBackground() {
   return (
-    <div style={{ backgroundImage: `url(${backgroundImage.src})` }} data-swiper-parallax="-300" className="w-full h-full flex items-center justify-center bg-cover bg-center">
-        <img data-swiper-parallax="-400" src={duskCollectorLogo.src} className="opacity-40 w-50 h-auto" alt="Dusk Collector Logo" />
+    <div style={{ backgroundImage: `url(${backgroundImage.src})` }} data-swiper-parallax="-300" className="w-full h-full flex flex-col items-center justify-center bg-cover bg-center">
+      <img data-swiper-parallax="-400" src={duskCollectorLogo.src} className="opacity-40 w-50 h-auto" alt="Dusk Collector Logo" />
+      <BandName />
     </div>
   );
 }
