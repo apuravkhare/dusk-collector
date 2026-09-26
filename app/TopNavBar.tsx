@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { menuItems } from './MenuItems';
+import duskCollectorLogo from '../public/Dusk Collector Cutout.svg';
 
 function TopNavBar( { swiperInstance }: { swiperInstance: any } ) {
   return (
@@ -12,7 +13,7 @@ function TopNavBar( { swiperInstance }: { swiperInstance: any } ) {
       <Container>
         <Navbar.Brand onClick={() => swiperInstance?.slideTo(0, 800)}>
           <span className="text-2xl font-bold text-black dark:text-zinc-50">
-            <img src="/Dusk Collector Cutout.svg" width="30" height="30" className="d-inline-block align-top me-2" />
+            <img src={duskCollectorLogo.src} width="30" height="30" className="d-inline-block align-top me-2" />
             Dusk Collector
           </span>
         </Navbar.Brand>
