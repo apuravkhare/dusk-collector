@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import TopNavBar from "./TopNavBar";
 import 'swiper/css';
 import 'swiper/css/pagination';
 

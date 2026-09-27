@@ -7,6 +7,7 @@ import { Parallax, Mousewheel, Pagination } from 'swiper/modules';
 import About from './about/page';
 import Music from './music/page';
 import ShowsPage from './shows/page';
+import ContactPage from './contact/page';
 import TopNavBar from './TopNavBar';
 import backgroundImage from "../public/ferry_sunset.jpeg";
 import duskCollectorLogo from '../public/Dusk Collector Cutout.svg';
@@ -66,6 +67,7 @@ export default function Home() {
         <SwiperSlide><Music /></SwiperSlide>
         <SwiperSlide><About /></SwiperSlide>
         <SwiperSlide><ShowsPage /></SwiperSlide>
+        <SwiperSlide> <ContactPage /></SwiperSlide>
       </Swiper>
     </main>
 
