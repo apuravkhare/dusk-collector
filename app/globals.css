@@ -30,29 +30,66 @@ body {
   src: url('../public/DuskCollector-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Prevents text from being invisible while loading */
+  font-display: swap;
+  /* Prevents text from being invisible while loading */
 }
 
 
 .fade-text {
   /* Use your newly registered font name here */
-  font-family: 'Dusk Collector', sans-serif; 
+  font-family: 'Dusk Collector', sans-serif;
+  color: white;
 }
 
 .fade-text span {
   display: inline-block;
   opacity: 0;
-  animation: letterFadeIn 0.5s ease forwards;
+  /* 1. Increased duration to 3s to give the text time to sit on screen */
+  /* 2. Changed 'forwards' to 'both' to handle starting and ending states cleanly */
+  animation: letterFadeInOut 3s ease both;
   animation-delay: calc(var(--index) * 0.1s);
 }
 
-@keyframes letterFadeIn {
-  from {
+@keyframes letterFadeInOut {
+
+  /* START: Invisible and shifted down */
+  0% {
     opacity: 0;
     transform: translateY(15px);
   }
-  to {
+
+  /* REVEAL: Fades in quickly by 15% of the timeline (approx 0.45s) */
+  15% {
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* SUSTAIN: Stays completely visible for the majority of the timeline */
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* END: Fades out smoothly at the very end while dropping slightly */
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+
+.image-bw {
+  filter: grayscale(100%) brightness(65%) contrast(140%);
+}
+
+/* Clips the colored foreground image to only reveal the SVG shape area */
+.image-color {
+  filter: saturate(120%);
+  mask-image: url('/Dusk Collector Cutout.svg');
+  -webkit-mask-image: url('/Dusk Collector Cutout.svg');
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: 40%;
+  transition: opacity 0.6s ease-in-out, mask-size 0.6s ease-in-out, -webkit-mask-size 0.6s ease-in-out;
+  opacity: 1;
 }
