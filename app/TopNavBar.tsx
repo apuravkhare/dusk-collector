@@ -12,9 +12,9 @@ function TopNavBar( { swiperInstance }: { swiperInstance: any } ) {
     <Navbar expand="lg" className="bg-body-tertiary top-0 z-50" sticky="top">
       <Container>
         <Navbar.Brand onClick={() => swiperInstance?.slideTo(0, 800)}>
-          <span className="flex items-center text-2xl font-bold text-black dark:text-zinc-50" style={{ fontFamily: 'Dusk Collector' }}>
+          <span className="flex items-center text-2xl font-bold text-black dark:text-zinc-50 cursor-pointer" style={{ fontFamily: 'Dusk Collector' }}>
             <img src={duskCollectorLogo.src} width="30" height="30" className="d-inline-block align-top me-2" />
-            DUSK COLLECTOR
+            {/* DUSK COLLECTOR */}
           </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
